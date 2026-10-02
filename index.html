@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zlata's Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/landing.css" />
+  <link rel="stylesheet" href="styles/panel.css" />
+  <link rel="stylesheet" href="styles/hud.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- Landing: header + tracklist. Text comes from src/config/content.js -->
+  <div id="landing">
+    <header>
+      <div class="brand">
+        <h1 id="site-title"></h1>
+        <p class="tagline" id="tagline"></p>
+      </div>
+      <p class="fine" id="fine-print"></p>
+      <span class="badge" id="clock">12:00</span>
+    </header>
+    <nav id="list" aria-label="Portfolio sections"></nav>
+  </div>
+
+  <!-- Topic overlay -->
+  <section id="panel" class="hidden" aria-live="polite">
+    <a href="#/" class="pill">← Back</a>
+    <div id="panel-body"></div>
+  </section>
+
+  <!-- Ball game HUD -->
+  <div id="hud" class="hidden">
+    <p>Roll the ball with <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys · <kbd>Space</kbd> to hop</p>
+    <a href="#/" class="pill">← Back</a>
+  </div>
+
+  <!-- Empty tall element that creates the scroll distance -->
+  <main id="scroll-space"></main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
