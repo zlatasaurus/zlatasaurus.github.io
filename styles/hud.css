@@ -1,9 +1,0 @@
-/* Ball-game overlay */
-#hud {
-  position: fixed; left: 0; right: 0; bottom: 24px; z-index: 3;
-  display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: 0 16px;
-  transition: opacity .6s; color: #fff;
-}
-#hud.hidden { opacity: 0; pointer-events: none; }
-#hud p { font-family: var(--font-mono); background: rgba(0,0,0,.45); padding: 8px 16px; border-radius: 999px; font-size: .8rem; backdrop-filter: blur(6px); }
-kbd { background: #fff2; border-radius: 4px; padding: 1px 6px; margin: 0 2px; font-family: inherit; }
